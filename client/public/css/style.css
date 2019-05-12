@@ -1,0 +1,237 @@
+body {
+  margin: 0 auto;
+  background-image: url('/images/tartan.jpg');
+  height: 100%;
+  overflow: auto;
+  font-family: de-walpergens-pica, serif;
+}
+
+
+#page-header {
+  text-align: center;
+  color: white;
+  font-size: 50px;
+}
+
+#main-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+#map {
+  width: 47vw;
+  height: 500px;
+  z-index: 1;
+  border: 5px solid lightgoldenrodyellow;
+  border-radius: 2%
+
+}
+
+#location-info {
+  width: 47vw;
+  height: 500px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 5px solid lightgoldenrodyellow;
+  border-radius: 2%;
+  overflow-y: scroll;
+}
+
+#location-info-placeholder {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  font-size: 22px;
+  height: 500px;
+}
+
+.location-info-inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.location-info-inner section {
+  text-align: justify;
+  font-size: 17px;
+  margin: 0 12px;
+  line-height: 1.2;
+}
+
+
+.location-info-header {
+  text-align: center;
+  margin: 10px
+}
+
+.location-img {
+  margin: 0;
+  height: 200px;
+  width: 265px;
+  overflow: hidden;
+  align-self: center;
+  border-radius: 1%;
+  padding-bottom: 10px;
+}
+
+.location-img img {
+  height: 200px;
+  width: auto;
+}
+
+#itinerary-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
+}
+
+.itinerary-card {
+  position: relative;
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  background-color: cornsilk;
+  height: 200px;
+  width: 180px;
+  border: 2px solid goldenrod;
+  border-radius: 1%;
+}
+
+.itinerary-name {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.itinerary-img {
+  margin: 8px 0;
+  height: 50%;
+  width: 90%;
+  overflow: hidden;
+  align-self: center;
+  border-radius: 1%;
+}
+
+.itinerary-img img {
+  height: 120px;
+  width: auto;
+}
+
+.itinerary-options-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.visited-true img{
+  opacity: 0.3;
+  filter: grayscale(50%);
+}
+
+.visited-true .itinerary-name {
+  display: none;
+}
+
+.visited-true .btn-visited {
+  display: none;
+}
+
+.rating-container {
+  color: black
+}
+
+
+.visited-undefined i {
+  display: none;
+}
+
+.visited-undefined .btn-review {
+  display: none;
+}
+
+.visited-true .fa-check-circle {
+  position: absolute;
+  top: 14%;
+  left: 34%;
+  border-radius: 50%;
+  font-size: 34px;
+  color: dimgrey;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+}
+
+
+/* BUTTONS */
+.btn-add {
+  display: flex;
+  justify-content: center;
+  width: 40%;
+  border: 2px solid black;
+  box-shadow: 0 2px grey;
+  font-size: 18px;
+  padding: 2px;
+  margin: 30px auto;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  box-shadow: 0 1px grey;
+  top: 2px
+}
+
+.btn:active {
+  box-shadow: none;
+  top: 6px;
+}
+
+.btn {
+  border: 2px solid black;
+  box-shadow: 0 2px grey;
+  font-size: 18px;
+  font-family: inherit;
+  padding: 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  outline: none;
+  color: black;
+  background-color: transparent;
+}
+
+/* MODAL */
+.review-modal {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: cornsilk;
+  margin: 15% auto;
+  padding: 20px;
+  width: 40%;
+  height: 15%;
+  font-size: 25px;
+  border: 4px solid goldenrod;
+  border-radius: 20px;
+}
+
+.form-submit {
+  background-color: lightgoldenrodyellow;
+  margin-left: 10px;
+}
+
+.form-select {
+  font-size: 17px;
+  margin-left: 10px;
+}
