@@ -87,23 +87,25 @@ ReviewLocationView.prototype.createReviewButton = function (parkId) {
   const modal = document.getElementById('modal')
 
   button.addEventListener('click', (evt) => {
-    PubSub.publish('Review-submit:review-submitted', evt.target.value)
+    PubSub.publish('Review:review-btn-clicked', evt.target.value)
     modal.style.display = 'block'
   })
   return button
 };
 
-ReviewLocationView.prototype.renderRatings = function (parkLocationRating) {
-  const para = document.createElement('p')
-  para.classList.add('rating')
-  para.innerText = 'Rating: ' + this.rating(parkLocationRating)
+ReviewLocationView.prototype.renderRatings = function (locationRating) {
+  const p = document.createElement('p')
+  p.classList.add('rating')
 
-  return para
+  p.innerText = 'Rating: ' + this.rating(locationRating)
+
+  return p
 };
 
-ReviewLocationView.prototype.rating = function (parkLocationRating) {
-  review = '⭐'.repeat(parkLocationRating)
-  return !parkLocationRating ? 'No Review Yet' : review
+ReviewLocationView.prototype.rating = function (park) {
+  review = '⭐'.repeat(park)
+  console.log(review)
+  return !park ? 'No Review Yet' : review
 };
 
 module.exports = ReviewLocationView;

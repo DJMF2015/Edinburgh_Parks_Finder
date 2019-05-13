@@ -10,7 +10,7 @@ app.use(express.static(publicPath));
 
 app.use(parser.json())
 
-MongoClient.connect('mongodb://localhost:27017', (err, client) => {
+MongoClient.connect('mongodb://localhost:27017', { useNewUrlParser: true } ,(err, client) => {
   if(err){
     console.log(err);
   }
