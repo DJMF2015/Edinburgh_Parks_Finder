@@ -1,11 +1,10 @@
 body {
   margin: 0 auto;
-  background-image: url('/images/tartan.jpg');
+  /* background-image: url('/images/tartan.jpg'); */
   height: 100%;
   overflow: auto;
   font-family: de-walpergens-pica, serif;
 }
-
 
 #page-header {
   text-align: center;

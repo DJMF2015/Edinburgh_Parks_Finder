@@ -22,7 +22,28 @@ const createRouter = function(collection){
     .then((docs) => res.json(docs))
   });
 
-
+//CREATE RECORD
+  router.post('/', (req, res) => {
+    const newData = req.body;
+    collection
+    .findOne(newData, function(err, success){
+      if(err){
+        console.log(err);
+      }
+      else {
+        if(success == null){
+          collection
+          .insertOne(newData)
+          .then(() => {
+            collection
+            .find()
+            .toArray()
+            .then((docs) => res.json(docs));
+          });
+        }
+      }
+    })
+  });
  //delete record
   router.delete('/:id', (req, res) => {
     const id = req.params.id;
@@ -52,29 +73,7 @@ const createRouter = function(collection){
       .then((docs) => res.json(docs));
     })
   });
-  //CREATE RECORD
-    router.post('/', (req, res) => {
-      const newData = req.body;
-      collection
-      .findOne(newData, function(err, success){
-        if(err){
-          console.log(err);
-        }
-        else {
-          if(success == null){
-            collection
-            .insertOne(newData)
-            .then(() => {
-              collection
-              .find()
-              .toArray()
-              .then((docs) => res.json(docs));
-            });
-          }
-        }
-      })
-    });
-    
+
   return router;
 
 }

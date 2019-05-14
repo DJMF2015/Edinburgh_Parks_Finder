@@ -1,11 +1,10 @@
 const MapWrapper = require('./models/mapwrapper.js');
 const Parks = require('./models/parks.js');
 const Review = require('./models/review.js');
-
 const MarkerRender = require('./views/marker_render.js');
-const ReviewView = require('./views/review_trail_view.js');
-const LocationDetail = require('./views/location_view_detail.js');
-const ReviewFormView = require('./views/review_form_view.js');
+const ReviewDetailView = require('./views/review_detail_view.js');
+const RenderView = require('./views/review_render_location.js');
+const ReviewView = require('./views/review_view.js');
 
 document.addEventListener('DOMContentLoaded', () => {
   map = new MapWrapper('map', 55.951998, -3.189970, 13);
@@ -19,16 +18,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const markerRender = new MarkerRender()
   markerRender.addMarkers()
 
-  const parkContainer = document.getElementById('location-info')
-  const parkDetail= new LocationDetail(parkContainer)
-  parkDetail.bindEvents();
+  const locationContainer = document.getElementById('location-info')
+  const reviewDetailView = new ReviewDetailView(locationContainer)
+  reviewDetailView.bindEvents()
 
-  const reviewContainer = document.getElementById('itinerary-container')
-  const reviewView = new ReviewView(reviewContainer)
-  reviewView.bindEvents()
+  const itineraryContainer = document.getElementById('itinerary-container')
+  const renderView = new RenderView(itineraryContainer)
+  renderView.bindEvents()
 
   const form = document.getElementById('review-form')
-  const reviewForm = new ReviewFormView(form)
-  reviewForm.bindEvents();
-
+  const reviewView = new ReviewView(form)
+  reviewView.bindEvents()
 })

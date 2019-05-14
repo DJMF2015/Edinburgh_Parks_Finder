@@ -6,7 +6,8 @@ db.parks.insertMany([
       name: "Edinburgh Castle",
       latlng: [55.948595, -3.199913],
       fact: "The castle sits on top of the remains of an extinct volcano, which acquired its shape from ages of erosion by glaciers.\n\nThe castle is home to St Margaret\u2019s Chapel, the 12th-century Holy Place and oldest standing building in Edinburgh.",
-      image: '/images/castle.jpg'
+      image: '/images/castle.jpg',
+      track:'//https://s3.eu-west-2.amazonaws.com/colt/Chase+%26+Status+-+Retreat2018+(Feat.+Cutty+Ranks).mp3'
     },
     {
       name: "Greyfriars Bobby Statue",
@@ -18,13 +19,15 @@ db.parks.insertMany([
       name: "Gladstones Land",
       latlng: [55.949448, -3.193669],
       fact: "Gladstone’s Land is a unique 17th century six-storey high-rise tenement house on the Royal Mile.\n\nBecause the Old Town of Edinburgh was surrounded by a large defensive wall, the inhabitants had run out of space and began building upwards with buildings said to be up to 14 stories tall!\n\nThe building is still used and lived in today making it one of the oldest continually inhabited buildings in Edinburgh.",
-      image: '/images/gladstones_land.jpg'
+      image: '/images/gladstones_land.jpg',
+      track:'//https://s3.eu-west-2.amazonaws.com/colt/Chase+%26+Status+-+Retreat2018+(Feat.+Cutty+Ranks).mp3'
     },
     {
       name: "St Giles' Cathedral",
       latlng: [55.949484, -3.190892],
       fact: "Also known as the High Kirk of Edinburgh, St Giles's Cathedral is the principle place of worship of the Church of Scotland in Edinburgh.\n\nThe church has been one of Edinburgh's religious focal points for approximately 900 years.\n\nThe cathedral is dedicated to Saint Giles, who is the patron saint of Edinburgh who and was a very popular saint in the Middle Ages.",
-      image: '/images/st_giles.jpg'
+      image: '/images/st_giles.jpg',
+      track: '//https://s3.eu-west-2.amazonaws.com/colt/Chase+%26+Status+-+Retreat2018+(Feat.+Cutty+Ranks).mp3'
     },
     {
       name: "Mary Kings Close",

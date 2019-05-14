@@ -1,25 +1,25 @@
 const Request = require('../helpers/request.js');
 const PubSub = require('../helpers/pub_sub.js');
 
-const ReviewFormView = function(form){
+const ReviewView = function(form){
   this.form = form;
   this.location = ''
 }
 
-ReviewFormView.prototype.bindEvents = function () {
+ReviewView.prototype.bindEvents = function () {
   this.storeLocation();
   this.form.addEventListener('submit', (evt) => {
     this.handleSubmit(evt);
   })
 };
 
-ReviewFormView.prototype.storeLocation = function () {
-  PubSub.subscribe('Review:review-btn-clicked', (evt) => {
+ReviewView.prototype.storeLocation = function () {
+  PubSub.subscribe('Itinerary:review-btn-clicked', (evt) => {
     this.location = evt.detail
   })
 };
 
-ReviewFormView.prototype.handleSubmit = function (evt) {
+ReviewView.prototype.handleSubmit = function (evt) {
   evt.preventDefault();
   const review = this.createReview(evt.target, this.location)
   PubSub.publish('Review:review-submitted', review)
@@ -28,7 +28,7 @@ ReviewFormView.prototype.handleSubmit = function (evt) {
   modal.style.display = "none";
 };
 
-ReviewFormView.prototype.createReview = function (form, location) {
+ReviewView.prototype.createReview = function (form, location) {
   const review = {
     id: location,
     payload: {
@@ -38,4 +38,4 @@ ReviewFormView.prototype.createReview = function (form, location) {
   return review
 };
 
-module.exports = ReviewFormView;
+module.exports = ReviewView;
