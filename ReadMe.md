@@ -6,4 +6,4 @@
 - npm start
 - open browser and enter 'http://localhost:3000'
 
-![alt text](screenshot.png 'height=30px' )
+![alt text](screenshot1.png 'height=20px' )
