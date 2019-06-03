@@ -1,6 +1,8 @@
 body {
   margin: 0 auto;
-  /* background-image: url('/images/tartan.jpg'); */
+  background-image: url('/images/edinburgh.jpg');
+  /* background-repeat: no-repeat; */
+  opacity:0.90;
   height: 100%;
   overflow: auto;
   font-family: de-walpergens-pica, serif;
@@ -8,7 +10,7 @@ body {
 
 #page-header {
   text-align: center;
-  color: white;
+  color: maroon;
   font-size: 50px;
 }
 
@@ -19,7 +21,7 @@ body {
 
 #map {
   width: 47vw;
-  height: 500px;
+  height: 550px;
   z-index: 1;
   border: 5px solid lightgoldenrodyellow;
   border-radius: 2%
@@ -28,7 +30,7 @@ body {
 
 #location-info {
   width: 47vw;
-  height: 500px;
+  height: 550px;
   background-color: rgba(255, 255, 255, 0.8);
   border: 5px solid lightgoldenrodyellow;
   border-radius: 2%;

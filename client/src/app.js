@@ -7,7 +7,7 @@ const RenderView = require('./views/review_render_location.js');
 const ReviewView = require('./views/review_view.js');
 
 document.addEventListener('DOMContentLoaded', () => {
-  map = new MapWrapper('map', 55.951998, -3.189970, 13);
+  map = new MapWrapper('map', 55.951998, -3.189970, 10.8);
   const parks = new Parks() //locations
   parks.getData();
 
