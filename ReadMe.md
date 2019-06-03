@@ -5,3 +5,5 @@
 - npm run seeds
 - npm start
 - open browser and enter 'http://localhost:3000'
+
+![alt text](screenshot.png 'height=30px' )
