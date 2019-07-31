@@ -7,8 +7,5 @@
 - npm start
 - open browser and enter 'http://localhost:3000'
 
-<<<<<<< HEAD
-![alt text](screenshot1.png 'height=20px' )
-=======
-![alt text](screenshot.png 'height=10px' )
->>>>>>> 0a93670990b5d0f158aab76c5240e9f23ddde168
+![alt text](park.png 'height=20px')
+
