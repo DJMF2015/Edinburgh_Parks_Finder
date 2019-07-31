@@ -7,5 +7,5 @@
 - npm start
 - open browser and enter 'http://localhost:3000'
 
-![alt text](park.png 'height=20px')
+![alt text](park.png 'parks')
 
